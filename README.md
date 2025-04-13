@@ -1,17 +1,35 @@
-# IntentSearch
+# 🧠 IntentSearch
 
-**IntentSearch** is an AI-powered intent recognition system that enhances e-commerce search experiences by interpreting user inputs—text, images, or voice—and mapping them to structured queries. This facilitates more accurate product searches and recommendations.
+**IntentSearch**  is an AI-powered, multimodal intent recognition system built to enhance e-commerce search experiences. Interpreting user inputs—whether text, image, or voice—transforms them into structured queries to enable smarter product searches and personalized recommendations.
 
-## 🚀 Features
+## ✨ Features
 
-- **Multimodal Input Handling**: Accepts and processes text, image, and voice inputs to understand user intent.
-- **Structured Query Generation**: Transforms natural language inputs into structured queries with fields like `query`, `category`, `price_max`, and `intent`.
-- **Image Captioning**: Utilizes BLIP (Bootstrapping Language-Image Pretraining) to generate descriptive captions for images, aiding in intent recognition.
-- **Audio Transcription**: Converts voice inputs into text for further processing.
-- **MongoDB Integration**: Stores and retrieves product data efficiently using MongoDB.
-- **FastAPI Backend**: Provides a robust and scalable API for handling requests.
+- **🔍 Multimodal Input Handling**: Accepts and processes text, image, and voice inputs to understand user intent.
+- **🧠 Intent Recognition**: Uses NLP and AI models to interpret user intentions and context with high accuracy.
+- **🧾 Structured Query Generation**: Transforms natural language inputs into structured queries with fields like `query`, `category`, `price_max`, and `intent`.
+- **🖼️ Image Captioning**: Utilizes BLIP (Bootstrapping Language-Image Pretraining) to generate descriptive captions for images, aiding in intent recognition.
+- **🔊 Audio Transcription**: Converts voice inputs into text for further processing.
+- **🗃️ MongoDB Integration**: Stores and retrieves product data efficiently using MongoDB.
+- **⚡ FastAPI Backend**: Provides a robust and scalable API for handling requests.
 
-## 🛠️ Installation
+## 📸 Screenshots or Demo
+
+Replace with actual screenshots or links to demo videos once available.
+
+### 🔍 Multimodal Search Interface
+
+![Multimodal Search UI](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfxUWbpRJO914twhna3q1m49jCKVqRW5SgxDkyXb4yUf-konmdYNANSmbBoRp6D2yM2Io&usqp=CAU)
+
+## 🧰 Tech Stack
+
+- **Backend**: FastAPI
+- **Database**: MongoDB
+- **AI/NLP**: OpenAI API, BLIP (Bootstrapped Language-Image Pretraining)
+- **Audio Processing**: SpeechRecognition
+- **Language**: Python 3.8+
+- **Deployment**: Uvicorn
+
+## 🚀 Installation
 
 1. **Clone the Repository**:
    ```bash
@@ -41,18 +59,20 @@
 
 ## 🥪 Usage
 
-1. **Start the FastAPI Server**:
+1. **🔥 Run the FastAPI Server**:
    ```bash
    uvicorn main:app --host 0.0.0.0 --port 8000 --reload
    ```
 
 2. **API Endpoint**:
    - **POST** `/search`: Accepts `text`, `image`, and `voice` inputs.
-
+   
    **Form Data Parameters**:
-   - `text` (optional): User's textual query.
-   - `image` (optional): Image file upload.
-   - `voice` (optional): Audio file upload.
+   | Parameter | Type                | Description              |
+   |  :---:    |        :---:        |        :---:             |
+   | `text`    | `string` (optional) | Text query input         |
+   | `image`   | `file` (optional)   | Upload an image file     |
+   | `voice`   | `file` (optional)   | Upload an audio/voice file |
 
    **Example using `curl`**:
    ```bash
